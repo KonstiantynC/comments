@@ -40,7 +40,7 @@ export default {
   },
   props: {
     commentList: {
-      type: Object,
+      type: Array,
       data: () => ({
       }),
       required:true

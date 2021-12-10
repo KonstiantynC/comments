@@ -41,6 +41,7 @@ export default {
     pageNumber: 1,
     showButton: true,
     theme: 'light',
+    totalPages: {}
   }),
   created() {
     this.loadPost()
@@ -67,7 +68,7 @@ export default {
             return responce.json()
           })
           .then(data => {
-            this.responce.concat(data.data)
+            this.responce = this.responce.concat(data.data)
             console.log(this.responce)
           })
           .catch(error => {
