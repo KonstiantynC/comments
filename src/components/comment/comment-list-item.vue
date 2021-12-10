@@ -64,6 +64,7 @@ export default {
   display: flex;
   flex-direction: column;
   font-size: 16px;
+  overflow: hidden;
 }
 
 .comment_item_text {

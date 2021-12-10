@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="comment_index" :name="theme">
     <div class="main">
       <div class="main_comment_title">
         <span>Comments</span>
@@ -41,7 +41,8 @@ export default {
     pageNumber: 1,
     showButton: true,
     theme: 'light',
-    totalPages: {}
+    totalPages: {},
+    theme: ''
   }),
   created() {
     this.loadPost()
@@ -108,7 +109,19 @@ export default {
 *{
   box-sizing: border-box;
   font-family: 'Nanum Gothic', sans-serif;
-} 
+}
+
+/*.comment_index[name="light"] {
+  .main > .main_comment_title {
+    background-color: #ffffff;
+  }
+}
+
+.comment_index[name="dark"] {
+  .main > .main_comment_title {
+    background-color: #c7c7c7;
+  }
+} */
 
 .main {
   display: flex;
